@@ -1,7 +1,6 @@
 const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {   //为node js的模块定义
-    mode: 'production', //制定模式为生产模式
+    // mode: 'production', //制定模式为生产模式
     entry:{
         'React UI frame':'./src/index.tsx',//入口
     },
@@ -21,25 +20,25 @@ module.exports = {   //为node js的模块定义
             }
         ]
     },
-    plugins: [
-        new HtmlWebpackPlugin({
-            title:'what',
-            template: 'index.html'
-        })
-    ],
-    externals: {  //作用是在不打包React 写一个外部的依赖 这些可以允许用户在使用别的库的时候正常运行react
-        react: {
-            commonjs: 'react',
-            commonjs2: 'react',
-            amd: 'react',
-            root: 'React',
-        },
-        'react-dom': {
-            commonjs: 'react-dom',
-            commonjs2: 'react-dom',
-            amd: 'react-dom',
-            root: 'ReactDOM',
-        },
-    }
+    // plugins: [
+    //     new HtmlWebpackPlugin({
+    //         title:'what',
+    //         template: 'index.html'
+    //     })
+    // ],
+    // externals: {  //作用是在不打包React 写一个外部的依赖 这些可以允许用户在使用别的库的时候正常运行react
+    //     react: {
+    //         commonjs: 'react',
+    //         commonjs2: 'react',
+    //         amd: 'react',
+    //         root: 'React',
+    //     },
+    //     'react-dom': {
+    //         commonjs: 'react-dom',
+    //         commonjs2: 'react-dom',
+    //         amd: 'react-dom',
+    //         root: 'ReactDOM',
+    //     },
+    // }
    
 }
