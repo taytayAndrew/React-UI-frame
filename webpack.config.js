@@ -5,6 +5,9 @@ module.exports = {   //为node js的模块定义
     entry:{
         'React UI frame':'./src/index.tsx',//入口
     },
+    resolve:{
+        extensions:['.ts','.tsx','.js','.jsx']//支持这些后缀的文件
+    },
     output:{//输出的模式
         path: path.resolve(__dirname, 'dist/lib'),//输出的目录不能直接写路径，因为不同的操作系统对应的输出格式不一样__dirname为当前目录
         library:'React UI frame', //库的名字
@@ -23,6 +26,20 @@ module.exports = {   //为node js的模块定义
             title:'what',
             template: 'index.html'
         })
-    ]
+    ],
+    externals: {  //作用是在不打包React 写一个外部的依赖 这些可以允许用户在使用别的库的时候正常运行react
+        react: {
+            commonjs: 'react',
+            commonjs2: 'react',
+            amd: 'react',
+            root: 'React',
+        },
+        'react-dom': {
+            commonjs: 'react-dom',
+            commonjs2: 'react-dom',
+            amd: 'react-dom',
+            root: 'ReactDOM',
+        },
+    }
    
 }
