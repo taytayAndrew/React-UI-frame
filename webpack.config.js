@@ -1,4 +1,5 @@
 const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {   //为node js的模块定义
     mode: 'production', //制定模式为生产模式
     entry:{
@@ -12,10 +13,16 @@ module.exports = {   //为node js的模块定义
     module:{ //支持tsx文件
         rules:[
             {
-                test: /\.tsx?$/,
+                test: /\.tsx?$/, //以.tsx结尾或.ts结尾
                 loader: 'awesome-typescript-loader'
             }
         ]
     },
+    plugins: [
+        new HtmlWebpackPlugin({
+            title:'what',
+            template: 'index.html'
+        })
+    ]
    
 }
