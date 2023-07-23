@@ -1,6 +1,5 @@
 import React from "react"
-import './icons/fish.svg'
-
+import './importIcons'
 
 interface IconProps{
     name:string
