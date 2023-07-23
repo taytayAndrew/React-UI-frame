@@ -1,6 +1,6 @@
-import Button from './button';
+import ReactDOM from 'react-dom'
+import React from 'react'
+import Icon from './icon'
 
-const a = 1
-console.log('hi')
 
-export {Button, a};
+ReactDOM.render(<div><Icon name='fish' /></div>,document.body.querySelector('#root'))

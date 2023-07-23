@@ -17,7 +17,11 @@ module.exports = {   //为node js的模块定义
             {
                 test: /\.tsx?$/, //以.tsx结尾或.ts结尾
                 loader: 'awesome-typescript-loader'
-            }
+            },
+            {
+                test: /\.svg$/,
+                loader: 'svg-sprite-loader',
+              },
         ]
     },
     // plugins: [
