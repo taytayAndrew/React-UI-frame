@@ -1,18 +1,29 @@
 import  React from "react"
 import './importIcons'
 import './icon.scss';
+import classesAdd from "./helper/classAdd";
 
-interface IconProps{
+interface IconProps extends React.SVGAttributes<SVGElement>{
     name:string
-    onClick:React.MouseEventHandler<SVGElement>
 }
-const Icon:React.FunctionComponent<IconProps> = (props) => {
+const Icon:React.FunctionComponent<IconProps> =
+    ({
+        className ,
+        name,
+        ...restProps
+    }) => {
     return (
-
-            <svg className='yu-icon' onClick={props.onClick}>
-                <use xlinkHref={`#${props.name}`}></use>
+            <svg className={classesAdd(`yu-icon`,className)}
+            {...restProps}
+            >
+                <use xlinkHref={`#${name}`}></use>
+                
             </svg>
 
-    )
+        )
 }
 export default Icon
+
+//<use :xlink:href=`#i-${name}`/>
+//请改成这样
+//<use :xlink:href="`#i-${name}`"/>
