@@ -1,13 +1,14 @@
+@import '../helper/helper';
 
 .yu-dialog {
     position: fixed;
     background-color: white;
-    width: 12em;
-    height: 12em;
+    min-width: 20em;
     border-radius: 4px;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+    z-index: 2;
     &-mask{
         position: fixed;
         width: 100%;
@@ -15,13 +16,14 @@
         top: 0;
         left: 0;
         background-color: fade-out($color: black, $amount: 0.5);
+        z-index: 1;
 
     }
     &-close{
         position: absolute;
         bottom: 100%;
         left: 100%;
-        background-color: red;
+        background-color: $main-color;
         width: 2em;
         height: 2em;
         border-radius: 2em;
@@ -32,14 +34,35 @@
         color: white
     }
     &-header{
-        border: solid 1px red;
+        font-size: 22px;
+        padding: 8px 16px;
+        border-bottom: 1px grey solid;
     }
     &-main{
-        border: solid 1px blue;
+
+        min-height: 10em;
+        border-bottom: 1px grey solid;
 
     }
     &-footer{
-        border: solid 1px green;
+         padding: 5px;
+         text-align: right;
+         button{
+            color: white;
+         }
+         .confirm {
+            background-color: #0069d9;
+         }
+         .deny{
+            background-color: #c82333 ;
+         }
+
 
     }
+}
+.yu-dialog-mask{
+    z-index: 119;
+}
+.yu-dialog{
+    z-index: 120;
 }
