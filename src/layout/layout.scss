@@ -1,0 +1,21 @@
+@import '../helper/helper';
+.yu-layout {
+ display: flex;
+ flex-direction: column;
+ &-content{
+   flex-grow: 1;
+ }
+ & &{
+   display: flex;
+   flex-grow: 1;
+   flex-direction: row;
+ }
+
+ &-hasAside {
+  flex-direction: row;
+  .yu-layout {
+    flex-direction: column;
+  }
+}
+
+}

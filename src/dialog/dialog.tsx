@@ -1,8 +1,10 @@
 import React, { ReactElement, ReactNode } from "react";
 import './dialog.scss'
 import Icon from "../icon";
-import '../index.scss'
+import '../index.scss';
 import ReactDOM from "react-dom";
+import { scpoeClass } from "../type/classes";
+
 
 interface Props {
     visible:boolean
@@ -10,11 +12,7 @@ interface Props {
     onClose:React.MouseEventHandler
     onClickCloseMask?:boolean
 }
-function scpoeClass(prefix:string) {
-   return function addYu(name?:string) {
-    return [prefix,name].filter(Boolean).join('-')
- }
-}
+
  
  const Dialog:React.FunctionComponent<Props>=(props)=> {
     const sc = scpoeClass('yu-dialog')
@@ -32,7 +30,7 @@ function scpoeClass(prefix:string) {
     <>
    
     <div className={sc('mask')} onClick={onClickMask}></div>
-    <div className={sc()}>
+    <div className={sc('')}>
     <div className={sc('close')} onClick={onClickClose}>
             <Icon  name='close' />
         </div>
