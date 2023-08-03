@@ -12,6 +12,7 @@ module.exports = Object.assign({}, base, {   //为node js的模块定义
     plugins: [
         new HtmlWebpackPlugin({
             template: 'example.html',
+            filename:'example.html'
         })
     ],
 
