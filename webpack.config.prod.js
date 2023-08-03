@@ -1,3 +1,4 @@
+
 const base = require('./webpack.config')
 module.exports = Object.assign({}, base, {   //为node js的模块定义
     mode: 'production', //制定模式为生产模式
