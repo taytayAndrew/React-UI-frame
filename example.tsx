@@ -1,6 +1,6 @@
 import React from 'react';
 import createRoot from 'react-dom';
-import {HashRouter as Router, Route, Link, Routes} from 'react-router-dom';
+import {HashRouter as Router, Route, Routes, NavLink} from 'react-router-dom';
 import dialogExample from './src/dialog/dialogExample'
 import {layoutExample} from './src/layout/layout.example'
 import { Aside } from './src/layout/aside';
@@ -8,6 +8,7 @@ import { Layout } from './src/layout/layout';
 import { Content } from './src/layout/content';
 import { Footer } from './src/layout/footer';
 import './example.scss'
+import IconDemo from './src/icons/Icondemo';
 
 
 createRoot.render(
@@ -25,29 +26,24 @@ createRoot.render(
           <h2>组件</h2>
           <ul>
             <li>
-              <Link to="/icon" >Icon</Link>
+              <NavLink to="/icon" >Icon</NavLink>
             </li>
             <li>
-              <Link to="/button">Button</Link>
+              <NavLink to="/button">Button</NavLink>
             </li>
             <li>
-              <Link to="/dialog">对话框</Link>
+              <NavLink to="/dialog">对话框</NavLink>
             </li>
             <li>
-              <Link to="/layout">布局</Link>
-            </li>
-            <li>
-              <Link to="/dialog">对话框</Link>
-            </li>
-            <li>
-              <Link to="/layout">布局</Link>
+              <NavLink to="/layout">布局</NavLink>
             </li>
           </ul>
         </Aside>
-        <Content>
+        <Content className='site-main'>
             <Routes>
             <Route path='/dialog' Component={dialogExample} />
             <Route path='/layout' Component={layoutExample} />
+            <Route path='/icon' Component={IconDemo} />
 
             </Routes>
         </Content>

@@ -31,7 +31,12 @@ module.exports = {   //为node js的模块定义
                 use:[
                     'file-loader'
                 ]
-            }
+            },
+            {
+                test: /\.mjs$/,
+                include: /node_modules/,
+                type: "javascript/auto"
+              }
         
        
         ]

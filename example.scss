@@ -16,7 +16,9 @@ ol, ul {
 h1,h2,h3,h4,h5,h6{
     font-weight: normal;
 }
-
+pre{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 a{
     text-decoration: none;
     color: inherit;
@@ -25,7 +27,10 @@ a{
     background-color: #ffffff;
 }
 .site-header{
+    padding-top: 32px;
 
+}
+.site-main{
 
 }
 .logo{
@@ -48,14 +53,43 @@ a{
         
     }
     ul{
+        
         min-width: 12em;
         padding: 0 20px;
         >li{
         padding: 8px;
-         &:hover{
-            color:#7cc2f1
-         }
+       
+        a{
+            display: inline-block;
+            width: 100px;
+            position: relative;
+             &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 0px;
+                height: 1px;
+                background-color: #7cc2f1; /* 修改为你想要的颜色 */
+                transition: width 0.3s ease-in-out;
+             }
+         
+            &:hover{
+                color: #7cc2f1;
+                &::after {
+                    width: 100px;
+                    transition: width 0.3s ease-in-out, right 0.3s ease-in-out;
+                    right: 100%;
+                  }
+            }
+            &.active{
+                color: #7cc2f1;
+                border-right: 1px solid #7cc2f1;
+                
+            }
         }
+        
+    }
     }
     
 }
@@ -65,4 +99,10 @@ a{
     justify-content: center;
     color: #c8c3cc;
     padding: 16px 0;
+}
+.example{
+    padding: 16px 20px;
+}
+.x{
+    padding: 20px;
 }
