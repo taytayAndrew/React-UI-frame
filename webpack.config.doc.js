@@ -7,7 +7,7 @@ module.exports = Object.assign({}, base, {   //为node js的模块定义
         example: './example.tsx',
     },
     output:{//输出的模式
-        path: path.resolve(__dirname, 'doc'),//输出的目录不能直接写路径，因为不同的操作系统对应的输出格式不一样__dirname为当前目录
+        path: path.resolve(__dirname, 'docs'),//输出的目录不能直接写路径，因为不同的操作系统对应的输出格式不一样__dirname为当前目录
     },
     plugins: [
         new HtmlWebpackPlugin({
