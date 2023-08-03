@@ -34,8 +34,9 @@ export const layoutExample:React.FC = () =>{
             <Layout className='' style={{height:'350px',width:'500px'}}>
                 <Header className="x">header</Header>
                 <Layout>
+               <Aside className="z">aside</Aside>
                 <Content className="y">content</Content>
-                <Aside className="z">aside</Aside>
+
                 </Layout>
                 <Footer className="x">footer</Footer>
             </Layout>

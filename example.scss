@@ -94,122 +94,15 @@ a{
     
 }
 .site-footer{
+    width: 100%;
     background-color: #e6effe;
+    position: fixed;
     display: flex;
     justify-content: center;
     color: #c8c3cc;
+    bottom: 0;
     padding: 16px 0;
 }
 .example{
     padding: 16px 20px;
-}
-.x{
-    padding: 20px;
-}*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-
-}
-*::before{
-    box-sizing: border-box;
-}
-*::after{
-    box-sizing: border-box;
-}
-ol, ul {
-    list-style:none
-}
-h1,h2,h3,h4,h5,h6{
-    font-weight: normal;
-}
-pre{
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-a{
-    text-decoration: none;
-    color: inherit;
-}
-.site-page{
-    background-color: #ffffff;
-}
-.site-header{
-    padding-top: 32px;
-
-}
-.site-main{
-
-}
-.logo{
-    display: flex;
-    align-items: center;
-    height: 75px;
-    padding: 0 20px;
-    span{
-        color: #00426a;
-        font-size: 30px;
-    }
-}
-.site-aside{
-    
-    border-right: 1px solid #e6effe;
-    margin-right: 30px;
-    h2{
-        font-size: 18px;
-        padding:20px;
-        
-    }
-    ul{
-        
-        min-width: 12em;
-        padding: 0 20px;
-        >li{
-        padding: 8px;
-       
-        a{
-            display: inline-block;
-            width: 100px;
-            position: relative;
-             &::after {
-                content: '';
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                width: 0px;
-                height: 1px;
-                background-color: #7cc2f1; /* 修改为你想要的颜色 */
-                transition: width 0.3s ease-in-out;
-             }
-         
-            &:hover{
-                color: #7cc2f1;
-                &::after {
-                    width: 100px;
-                    transition: width 0.3s ease-in-out, right 0.3s ease-in-out;
-                    right: 100%;
-                  }
-            }
-            &.active{
-                color: #7cc2f1;
-                border-right: 1px solid #7cc2f1;
-                
-            }
-        }
-        
-    }
-    }
-    
-}
-.site-footer{
-    background-color: #e6effe;
-    display: flex;
-    justify-content: center;
-    color: #c8c3cc;
-    padding: 16px 0;
-}
-.example{
-    padding: 16px 20px;
-}
-.x{
-    padding: 20px;
 }

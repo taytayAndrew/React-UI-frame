@@ -3,7 +3,7 @@
 .yu-dialog {
     position: fixed;
     background-color: white;
-    min-width: 20em;
+    min-width: 30em;
     border-radius: 4px;
     top: 50%;
     left: 50%;
@@ -23,7 +23,7 @@
         position: absolute;
         bottom: 100%;
         left: 100%;
-        background-color: $main-color;
+        background-color: #00426a;
         width: 2em;
         height: 2em;
         border-radius: 2em;
@@ -35,13 +35,14 @@
     }
     &-header{
         font-size: 22px;
-        padding: 8px 16px;
-        border-bottom: 1px grey solid;
+        padding: 20px 16px;
+        border-bottom: 1px #d9d9d9 solid;
     }
-    &-main{
-
+    &-main{ 
+        color:#7a767e;
+        padding: 20px;
         min-height: 10em;
-        border-bottom: 1px grey solid;
+        border-bottom: 1px #d9d9d9 solid;
 
     }
     &-footer{

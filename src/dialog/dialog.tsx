@@ -93,12 +93,11 @@ export const confirm = (content:string,yes?:() => void,no?:() => void) => {
     }
     const onNo =() =>{
         close()
-        no&&no()
-
+       no&&no()
     }
     const button=[
-        <button style={{backgroundColor: '#0069d9'}} onClick={onYes}>yes</button>,
-        <button style={{backgroundColor: '#c82333'}} onClick={onNo}>no</button>
+        <button style={{backgroundColor: '#0069d9',width:'60px'}} onClick={onYes}>确认</button>,
+        <button style={{backgroundColor: '#c82333',width:'60px'}} onClick={onNo}>取消</button>
     ]
     const close = modal(content,[...button])
 }
