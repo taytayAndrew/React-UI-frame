@@ -102,7 +102,80 @@ a{
 }
 .example{
     padding: 16px 20px;
+    display: flex;
+    
+    
 }
-.x{
-    padding: 20px;
+.iconBox{
+    width: 100%;
+    border: 1px solid #ebebeb;
+    .iconCode {
+        height: 0;
+        //animation: myAnimationEnd 0.5s ease;
+        overflow: hidden;
+        transition: all 0.5s ;
+
+      
+      }
+    .showCode {
+        height: 300px; /* Set the desired expanded height */
+        //animation: myAnimation 0.5s linear;
+        padding:20px;
+        overflow: hidden;
+        transition: all 0.5s ;
+
+        }
+        // @keyframes myAnimation {
+        //     0% {
+        //             max-height: 0px;
+        //     }
+        //     100% {
+        //             max-height: 100px;
+        //     }
+        // }
+        // @keyframes myAnimationEnd {
+        //     0% {
+        //         max-height: 100px;
+        //     }
+        //     100% {
+        //         max-height: 0px;
+        //     }
+        // }
+       
 }
+.showDemo{
+    overflow: hidden;
+    border-top: 1px solid #ebebeb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    transition: all .5s;
+    
+    .iconShowIcon{
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        transition: all .5s;
+        &:hover{
+            
+            color: $main-color;
+            cursor: pointer;
+            transform: translateX(-30px);
+            transition: all .5s;
+        }
+        
+    }
+    &:hover{
+
+        background-color: #f9fafc;
+        box-shadow:.5px .2px .5px  #c8c3cc;
+        cursor: pointer;
+
+    }
+
+    
+ }
+ 
