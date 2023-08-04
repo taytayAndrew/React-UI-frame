@@ -21,7 +21,7 @@ createRoot.render(
         </div>
 
       </header>
-      <Layout>
+      <Layout className='siteLayout'>
         <Aside className='site-aside'>
           <h2>组件</h2>
           <ul>

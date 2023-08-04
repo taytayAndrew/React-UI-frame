@@ -3,7 +3,7 @@ import Icon from "../icon"
 
 export const IconExample:React.FC = () =>{
  return (
-    <div>
+    <div >
         <Icon name='fish'></Icon>
         <Icon name='qq'></Icon>
 

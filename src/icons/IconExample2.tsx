@@ -1,11 +1,12 @@
 import React from "react"
 import Icon from "../icon"
+import '../icon.scss'
 
 export const IconExample:React.FC = () =>{
  return (
-    <div>
-        <Icon name='fish'></Icon>
-        <Icon name='qq'></Icon>
+    <div className="IconExample">
+        <Icon className="iconFish"  name='fish'></Icon>
+        <Icon className="iconQq"  name='qq'></Icon>
 
     </div>)
 }
