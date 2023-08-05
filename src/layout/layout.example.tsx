@@ -1,56 +1,36 @@
 import React from "react"
-import { Layout } from "./layout"
-import { Header } from "./header"
-import { Content } from "./content"
-import { Footer } from "./footer"
-import { Aside } from "./aside"
 import './layout.scss'
 import './layout.example.scss'
+import { LayoutExample1 } from "./layoutExample1"
+import { LayoutExample3 } from "./layoutExample3"
 
+import { LayoutExample2 } from "./layoutExample2"
+import { LayoutExample4 } from "./layoutExample4"
 export const layoutExample:React.FC = () =>{
  return (
     <div> 
         <div >
-            <h1>第一个例子</h1>
-            <Layout className='' style={{height:'350px',width:'500px'}}>
-                <Header className="x">header</Header>
-                <Content className="y">content</Content>
-                <Footer className="x">footer</Footer>
-            </Layout>
+            <h2 className="exampleDetail">基础布局</h2>
+            <h3 style={{marginBottom:'10px'}}>使用上中下简易布局</h3>
+            <LayoutExample1 />
         </div>
         <div >
-            <h1>第二个例子</h1>
-            <Layout className='' style={{height:'350px',width:'500px'}}>
-                <Header className="x">header</Header>
-                <Layout>
-                <Content className="y">content</Content>
-                <Aside className="z">aside</Aside>
-                </Layout>
-                <Footer className="x">footer</Footer>
-            </Layout>
-        </div>
-        <div >
-            <h1>第三个例子</h1>
-            <Layout className='' style={{height:'350px',width:'500px'}}>
-                <Header className="x">header</Header>
-                <Layout>
-               <Aside className="z">aside</Aside>
-                <Content className="y">content</Content>
+        <h2 className="exampleDetail">分栏布局</h2>
+        <h3 style={{marginBottom:'10px'}}>内容部分增添侧栏 侧栏靠右</h3>
+         <LayoutExample2 />
 
-                </Layout>
-                <Footer className="x">footer</Footer>
-            </Layout>
         </div>
         <div >
-            <h1>第四个例子</h1>
-            <Layout className='' style={{height:'350px',width:'500px'}}>
-            <Aside className="z" >aside</Aside>
-                <Layout>
-                <Header className="x">header</Header>
-                <Content className="y">content</Content>
-                <Footer className="x">footer</Footer>
-                </Layout>
-            </Layout>
+        <h2 className="exampleDetail">分栏布局</h2>
+        <h3 style={{marginBottom:'10px'}}>内容部分增添侧栏，侧栏靠左</h3>
+        <LayoutExample3 />
+
+        </div>
+        <div >
+        <h2 className="exampleDetail">左右布局</h2>
+        <h3 style={{marginBottom:'10px'}}>侧栏与上下中结构左右布局</h3>
+        <LayoutExample4 />
+
         </div>
     </div>)
 }

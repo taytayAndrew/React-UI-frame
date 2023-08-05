@@ -11,6 +11,48 @@ $main-color:#7cc2f1;
 *::after{
     box-sizing: border-box;
 }
+.content{
+    height:2500px;
+}
+#modeCheckBox{
+    display: none;
+   
+}
+#modeCheckBox:checked + .content{
+  background-color: #1e1e20;
+  color: white;
+  #modeBtn{
+    .daymode{
+        transform: translateX(50px);
+        transition: all 1s;
+    }
+  }
+  transition: all 1s;
+}
+#modeCheckBox + .content{
+    #modeBtn{
+      .daymode{
+          transform: translateX(10px);
+          transition: all 1s;
+      }
+    }
+    transition: all 1s;
+  }
+#modeBtn{
+  position: absolute;
+  right: 50px;
+  top: 50px;
+  width: 100px;
+
+
+   .daymode{
+    font-size: 20px;
+   }
+}
+.modeChange{
+
+}
+
 ol, ul {
     list-style:none
 }
@@ -35,6 +77,8 @@ a{
 }
 .site-main{
     max-width: 900px;
+    margin-top: 20px;
+    
 
 }
 .logo{
@@ -50,10 +94,12 @@ a{
 .site-aside{
     
     border-right: 1px solid #e6effe;
+    margin-top: 20px;
     margin-right: 30px;
     h2{
         font-size: 18px;
-        padding:20px;
+        padding-left:30px;
+        padding-bottom: 30px;
         
     }
     ul{
@@ -61,7 +107,10 @@ a{
         min-width: 12em;
         padding: 0 20px;
         >li{
-        padding: 8px;
+        padding:10px;
+        margin-bottom: 10px;
+        
+        
        
         a{
             display: inline-block;
@@ -100,7 +149,7 @@ a{
 .site-footer{
     width: 100%;
     background-color: #e6effe;
-    position: fixed;
+    position: relative;
     display: flex;
     justify-content: center;
     color: #c8c3cc;

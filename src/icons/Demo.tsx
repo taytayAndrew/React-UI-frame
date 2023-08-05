@@ -1,7 +1,6 @@
 import React, { useState } from "react"
 import '../../example.scss'
-import HighlightCode from '../component/HighLight'
-import Icon from "../icon";
+import ShowDemoCode from "../component/showDemoCode";
 
 
 interface Props{
@@ -17,27 +16,8 @@ export const Demo:React.FC<Props>= (props) =>{
       <div className="example">
         {props.children}
        </div>
-        <div onMouseEnter={() => setHovered(true)}
-          onMouseLeave={() => setHovered(false)} className="showDemo" onClick={() => setCodeVisible(!codeVisible)}>
-          {codeVisible ?
-          <div className="iconShowIcon">
-            {hovered && (codeVisible ? "隐藏文本" : "显示文本")}
-            <Icon name="pointup" style={{width:'20px'}}/>
-            </div>
-            :
-            <div className="iconShowIcon">
-            {hovered && (codeVisible ? "隐藏文本" : "显示文本")}
-            <Icon name="point" style={{width:'20px'}}/>
-            </div>
-          }
-          
-      </div>
-              {codeVisible ?
-              <HighlightCode code={props.code} className='showCode'/>
-              :
-              <HighlightCode code={props.code} className='iconCode'/>
-
-              }  
+       <ShowDemoCode codeVisible={codeVisible} hovered={hovered} 
+       setCodeVisible={setCodeVisible} setHovered={setHovered} code={props.code}/>
      </div>
      <script>
 
