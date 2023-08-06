@@ -1,6 +1,8 @@
 import React from "react"
 import Icon from "../icon"
 import HighlightCode from '../component/HighLight'
+import '../../example.scss'
+
 interface Props{
     setHovered:React.Dispatch<React.SetStateAction<boolean>>
     hovered:boolean
@@ -27,7 +29,7 @@ export const ShowDemoCode:React.FC<Props> = (props) =>{
     
 </div>
         {props.codeVisible ?
-        <HighlightCode code={props.code} className='showCode'/>
+        <HighlightCode code={props.code} className='showCode' />
         :
         <HighlightCode code={props.code} className='iconCode'/>
 

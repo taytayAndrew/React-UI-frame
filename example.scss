@@ -12,7 +12,7 @@ $main-color:#7cc2f1;
     box-sizing: border-box;
 }
 .content{
-    height:2500px;
+    min-height: 1000px;
 }
 #modeCheckBox{
     display: none;
@@ -169,12 +169,10 @@ a{
         height: 0;
         //animation: myAnimationEnd 0.5s ease;
         overflow: hidden;
-        transition: all 0.5s ;
-
-      
+        transition: all 0.5s 
       }
     .showCode {
-        height: 300px; /* Set the desired expanded height */
+        height: 380px; /* Set the desired expanded height */
         //animation: myAnimation 0.5s linear;
         padding:20px;
         overflow: hidden;
