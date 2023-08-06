@@ -1,6 +1,6 @@
 #!bin/env bash
 yarn doc
-git checkout ph-pages
+git checkout gh-pages
 git add .
 git commit -m 'update'
 git push
