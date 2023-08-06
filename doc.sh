@@ -1,7 +1,7 @@
 #!bin/env bash
 yarn doc
 git checkout ph-pages
-mv -f doc/* ./
+mv -f docs/* ./
 git add .
 git commit -m 'update'
 git push
