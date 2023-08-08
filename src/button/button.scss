@@ -1,0 +1,136 @@
+$main-color:#1890ff;
+$main-red:#f5222d;
+
+// h4{
+//     color:rgba(0, 0, 0, 0.65)
+// }
+// h1{
+//     color: #0d1a26;
+// }
+.buttonMain{
+    .buttonMainHead{
+        margin: 30px 0;
+    }
+    .buttonMainContent{
+        margin-bottom: 80px;
+        border: 1px solid #d9d9d9;
+        border-radius: 10px;
+        .buttonExample{
+            height: 139px;
+            border-bottom: 1px solid #d9d9d9;
+            display: flex;
+            align-items: center;
+            padding: 0 30px
+        }
+        .contentInfo{
+            padding: 25px 32px;
+            position: relative;
+            font-size: 14px;
+            line-height: 22px;
+            font-weight: lighter;
+           
+        }
+    }
+}
+.yu-button{
+    &-buttonHead{
+        h1{
+
+            font-size: 24px;
+            line-height: 32px;
+        }
+        h4{
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 22px;
+            margin-top: 20px;
+        }
+        margin-top: 10px;
+        margin-bottom: 50px;
+    }
+    
+        width: 100px;
+        height: 40px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+        line-height: 22px;
+        padding: 4px 15px;
+        border: 1px solid;
+        color: rgba(0, 0, 0, 0.65);
+        border-color: rgba(0, 0, 0, 0.15);
+        border-radius: 4px;
+        background-color: #fff;
+        cursor: pointer;
+        transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+        position: relative;
+        margin-right: 30px;
+
+    &-normal{
+        border-color: #d9d9d9;
+        color: #59597e;
+       
+        &:hover{
+        border-color: $main-color;
+        color: $main-color;
+        }
+        &:focus {
+            outline: none;
+            color: $main-color;
+            border-color: $main-color;
+           
+        }
+    }
+    &-primary{
+        color: white;
+        background-color: $main-color
+    }
+    &-dashed{
+        color: #59597e;
+        border: dashed 1px #d2caca;
+       
+        &:hover{
+        border-color: $main-color;
+        color: $main-color;
+        }
+        &:focus {
+            outline: none;
+            color: $main-color;
+            border-color: $main-color;
+           
+        }
+       
+    }
+    &-danger{
+        color: $main-red;
+        background-color: #f5f5f5;
+        border-color: #d9d9d9;
+       
+        &:hover{
+        background-color: $main-red;
+        color: white;
+        }
+        &:focus {
+            outline: none;
+            color:$main-red;
+            background-color: #f5f5f5;
+            border-color: $main-red;
+           
+        }
+       
+    }
+      &-disabled{
+        color: rgba(0, 0, 0, 0.25);
+        border-color: #d9d9d9;
+        background-color: #e6e6e6;
+        cursor: not-allowed;
+
+      }
+      &-loading{
+        display: inline-flex
+      }
+      &-Click{
+        display: inline-flex
+      }
+    }

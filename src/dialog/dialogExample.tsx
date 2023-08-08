@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Dialog,{alert , confirm,modal} from "./dialog";
+import Dialog,{alert,confirm,modal} from "./dialog";
 
 export default function (){
     const [x,setX] = useState(false)
@@ -11,7 +11,7 @@ export default function (){
             </h1>
         )
     }
-    //由于函数延迟执行 onClick中执行的是close函数 也就是onClick等于modal的返回值
+    //由于函数延迟执行性 onClick中执行的是close函数 也就是onClick等于modal的返回值
     return(
         <div >
         <div style={{position:'relative',zIndex : '10', paddingBottom:'50px'}}>

@@ -1,0 +1,15 @@
+import React from "react"
+import './button.scss'
+import {Button} from './button'
+import './button-wave.scss'
+
+export const ButtonExample2:React.FC = () =>{
+ return (
+    <>
+    <Button content="Disabled" type="disabled"/>
+    <Button content="Loading" type="loading" iconposition='left' hasIcon={true} iconName="loading"/>
+    <Button content="Clickme" type="Click" iconposition='left' hasIcon={true} iconName="loading"/>
+    </>
+
+    )
+}

@@ -10,6 +10,7 @@ import { Footer } from './src/layout/footer';
 import './example.scss'
 import IconDemo from './src/icons/Icondemo';
 import {DayModeChange} from './src/component/dayModeChange'
+import {ButtonExample} from './src/button/buttonDemo'
 
 
 createRoot.render(
@@ -52,6 +53,7 @@ createRoot.render(
           <Route path='/dialog' Component={dialogExample} />
           <Route path='/layout' Component={layoutExample} />
           <Route path='/icon' Component={IconDemo} />
+          <Route path='/button' Component={ButtonExample} />
 
           </Routes>
       </Content>
