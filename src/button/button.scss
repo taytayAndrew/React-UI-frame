@@ -33,6 +33,11 @@ $main-red:#f5222d;
     }
 }
 .yu-button{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+   
     &-buttonHead{
         h1{
 
@@ -50,7 +55,7 @@ $main-red:#f5222d;
     }
     
         width: 100px;
-        height: 40px;
+        height: 35px;
         display: inline-flex;
         justify-content: center;
         align-items: center;
@@ -82,9 +87,32 @@ $main-red:#f5222d;
            
         }
     }
+    &-normal.ghost{
+        background-color: transparent;
+        color: white;
+        border-color: white;
+        &:hover{
+            border-color: $main-color;
+            color: $main-color;
+            }
+            &:focus {
+                outline: none;
+                color: $main-color;
+                border-color: $main-color;
+               
+            }
+    }
     &-primary{
         color: white;
-        background-color: $main-color
+        background-color: $main-color;
+        &:hover{
+            background-color: #40a9ff;
+        }
+    }
+    &-primary.ghost{
+        background-color: transparent;
+        border-color: $main-color;
+        color: $main-color;
     }
     &-dashed{
         color: #59597e;
@@ -101,6 +129,11 @@ $main-red:#f5222d;
            
         }
        
+    }
+    &-dashed.ghost{
+        background-color: transparent;
+        border-color: white;
+        color:white;
     }
     &-danger{
         color: $main-red;
@@ -120,6 +153,10 @@ $main-red:#f5222d;
         }
        
     }
+    &-danger.ghost{
+        background-color: transparent;
+        border-color: $main-red;
+    }
       &-disabled{
         color: rgba(0, 0, 0, 0.25);
         border-color: #d9d9d9;
@@ -128,9 +165,59 @@ $main-red:#f5222d;
 
       }
       &-loading{
-        display: inline-flex
+        width: 110px;
+        display: inline-flex;
+        background-color: $main-color;
+        color: white;
+        &:hover{
+            background-color: #40a9ff;
+        }
+       
+        .loadingIcon{
+        color: white;
+        }
+        
+        
       }
-      &-Click{
-        display: inline-flex
+      
+      &-Icon{
+        border-color: #d9d9d9;
+        color: #59597e;
+       
+        &:hover{
+        border-color: $main-color;
+        color: $main-color;
+        }
+        &:focus {
+            outline: none;
+            color: $main-color;
+            border-color: $main-color;
+           
+        }
       }
+     .api-table{
+            border-collapse: collapse;
+            line-height: 1.8em;
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto 20px;
+        
+            
+     }
+}
+   
+.loadingIcon {
+    display: flex;
+    align-items: center;
+    .loading{
+        animation: button-loading-spin 1s linear infinite;
     }
+    @keyframes button-loading-spin{
+        0%{
+            transform: rotate(0);
+        }
+        100%{
+            transform: rotate(360deg);
+        }
+    }
+}
