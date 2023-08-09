@@ -16,7 +16,7 @@ $main-red:#f5222d;
         border: 1px solid #d9d9d9;
         border-radius: 10px;
         .buttonExample{
-            height: 139px;
+            height: 120px;
             border-bottom: 1px solid #d9d9d9;
             display: flex;
             align-items: center;
@@ -195,15 +195,7 @@ $main-red:#f5222d;
            
         }
       }
-     .api-table{
-            border-collapse: collapse;
-            line-height: 1.8em;
-            width: 100%;
-            max-width: 1000px;
-            margin: 0 auto 20px;
-        
-            
-     }
+    
 }
    
 .loadingIcon {
@@ -220,4 +212,47 @@ $main-red:#f5222d;
             transform: rotate(360deg);
         }
     }
+}
+table {
+    display: table;
+    border-collapse: separate;
+    box-sizing: border-box;
+    text-indent: initial;
+    border-spacing: 2px;
+    border-color: gray;
+}
+.api-table{
+    border-collapse: collapse;
+    line-height: 1.8em;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto 20px;
+    & th{
+        background-color: rgba(0, 0, 0, 0.04);
+        font-weight: 500;
+        padding: 15px 30px;
+        color: #565656;
+        font-size: 15px;
+        border-bottom: 1px solid #d9d9d9;
+        text-align: center;
+    }
+    & td{
+        padding: 20px 30px;
+        font-size: 15px;
+        text-align: center;
+        
+    }
+    
+    & th.des, & th.type, 
+    & td.des, & td.type {
+        text-align: start;
+        min-width: 200px;
+        max-width: 300px;
+        text-align: center;
+    }
+}
+
+
+.api-table td.type{
+    color: #c41da8;
 }

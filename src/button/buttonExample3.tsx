@@ -3,7 +3,7 @@ import './button.scss'
 import {Button} from './button'
 import './button-wave.scss'
 
-export const ButtonExample2:React.FC = () =>{
+export const ButtonExample3:React.FC = () =>{
  return (
     <>
     <Button content="Disabled" type="disabled"/>

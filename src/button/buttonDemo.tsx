@@ -4,9 +4,10 @@ import './button-wave.scss'
 import { scpoeClass } from "../type/classes"
 import { ButtonExampleCode } from "./buttonExampleDemo"
 import { ButtonExample1 } from "./buttonExample1"
-import { ButtonExample3 } from "./buttonExample2"
-import { ButtonExample2 } from "./buttonExample3"
+import { ButtonExample2 } from "./buttonExample2"
+import { ButtonExample3 } from "./buttonExample3"
 import { ButtonExample4 } from "./buttonExample4"
+import { ButtonTr } from "./buttonAPI"
 
 export const ButtonExample:React.FC = () =>{
     const sc = scpoeClass('yu-button')
@@ -63,18 +64,24 @@ export const ButtonExample:React.FC = () =>{
                     <ButtonExampleCode exampleNum={4}/>
                     </div>
                 </div>
-                <table className="api-table">
-            <tbody>
-                <tr>
-                    <th>1</th>
-                    <th className="des">1</th>
-                    <th className="type">1</th>
-                    <th>1</th>
-
-
-                </tr>
-            </tbody>
-        </table>
+            <table className="api-table">
+                <thead>
+                    <tr>
+                        <th>参数</th>
+                        <th className="des">说明</th>
+                        <th className="type">类型</th>
+                        <th>默认值</th>
+                    </tr>
+                </thead>
+                    <tbody>
+                       <ButtonTr dialog="type" info="button显示类型" 
+                       type="'normal'|'primary'|'dashed'|
+                       'danger'|'Icon'|'disabled'|'loading'" defaultInfo="normal" />
+                       <ButtonTr dialog="type" info="button显示类型" 
+                       type="'normal'|'primary'|'dashed'|
+                       'danger'|'Icon'|'disabled'|'loading'" defaultInfo="normal" />
+                    </tbody>
+            </table>
             </div>
        
     </div>

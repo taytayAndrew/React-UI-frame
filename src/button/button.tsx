@@ -6,7 +6,8 @@ import './button-wave.scss'
 import Icon from "../icon"
 
 interface Props{
-    type?:string
+    type?:"normal"|"primary"|"dashed"|
+    "danger"|"Icon"|"disabled"|"loading" 
     content:string
     iconposition?:'left'|'right'
     hasIcon?:boolean;
@@ -17,6 +18,7 @@ interface Props{
 }
 
 export const Button:React.FC<Props>= (props) =>{
+    const{type='normal',content,iconposition,iconName,hasIcon,changeloading='false'}= props
     const sc = scpoeClass('yu-button')
     const [hasClick , setClick] = useState(true)
     const [clickChange,setClickChange] = useState(true)
@@ -24,7 +26,7 @@ export const Button:React.FC<Props>= (props) =>{
         return new Promise(resolve => setTimeout(resolve, time));
       }
     const onClick = async () =>{
-        if(props.changeloading){
+        if(changeloading){
             setClickChange(!clickChange)
         }
         
@@ -37,30 +39,30 @@ export const Button:React.FC<Props>= (props) =>{
     }
  return (
 
-    <button onClick={onClick}  className={cs(sc(props.type),'yu-button',
+    <button onClick={onClick}  className={cs(sc(type),'yu-button',
     hasClick ? 'wave-animation-animating' :'' ,
     props.ghost ? 'ghost':''
     
     )}>
 
-        {props.hasIcon 
+        {hasIcon 
         ?
-        props.iconposition === 'right' 
+        iconposition === 'right' 
         ?
         <>
         <div  style={{paddingLeft:'5px'}}>
-            {props.content}
+            {content}
         </div>
         <div className="loadingIcon">
             {
-                props.type === 'loading'
+                type === 'loading'
                 ?
                 clickChange ?
-                <Icon className="loading" name={props.iconName as string} />
+                <Icon className="loading" name={iconName as string} />
                 :
                 <Icon name="buy" style={{color:'white'}}/>
                 :
-                <Icon name={props.iconName as string} />
+                <Icon name={iconName as string} />
             }
         </div>     
         </>        
@@ -68,24 +70,24 @@ export const Button:React.FC<Props>= (props) =>{
         <>
         <div className="loadingIcon" onClick={() => setClick(!hasClick)}>
             {
-                 props.type === 'loading'
+                 type === 'loading'
                  ?
                 clickChange ?
-                <Icon className="loading" name={props.iconName as string} />
+                <Icon className="loading" name={iconName as string} />
                 :
                 <Icon name="buy" />
                 :
-                <Icon name={props.iconName as string} />
+                <Icon name={iconName as string} />
      
             }
         </div>
         <div onClick={onClick} style={{paddingLeft:'5px'}}>
-            {props.content}
+            {content}
         </div>
         </>
         :
         <div>
-        {props.content}
+        {content}
         </div>
         }
     </button>
