@@ -8,12 +8,12 @@ import { Aside } from "./aside"
 export const LayoutExample2:React.FC = () =>{
  return (
     <Layout className='exampleShow'>
-    <Header className="x">header</Header>
+    <Header className="headerAndFooter">header</Header>
     <Layout>
-    <Content className="y">content</Content>
-    <Aside className="z">aside</Aside>
+    <Content className="layoutContent">content</Content>
+    <Aside className="aside">aside</Aside>
     </Layout>
-    <Footer className="x">footer</Footer>
+    <Footer className="headerAndFooter">footer</Footer>
 </Layout>
             )
 }

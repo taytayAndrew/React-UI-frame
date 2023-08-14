@@ -18,7 +18,7 @@ interface Props{
 }
 
 export const Button:React.FC<Props>= (props) =>{
-    const{type='normal',content,iconposition,iconName,hasIcon,changeloading='false'}= props
+    const{type='normal',content,iconposition='left',iconName,hasIcon,changeloading='false'}= props
     const sc = scpoeClass('yu-button')
     const [hasClick , setClick] = useState(true)
     const [clickChange,setClickChange] = useState(true)

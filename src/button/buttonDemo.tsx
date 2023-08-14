@@ -77,9 +77,18 @@ export const ButtonExample:React.FC = () =>{
                        <ButtonTr dialog="type" info="button显示类型" 
                        type="'normal'|'primary'|'dashed'|
                        'danger'|'Icon'|'disabled'|'loading'" defaultInfo="normal" />
-                       <ButtonTr dialog="type" info="button显示类型" 
-                       type="'normal'|'primary'|'dashed'|
-                       'danger'|'Icon'|'disabled'|'loading'" defaultInfo="normal" />
+                       <ButtonTr dialog="content" info="button文本内容" 
+                       type="string" defaultInfo="————" />
+                       <ButtonTr dialog="iconposition" info="button内Icon位置" 
+                       type="'left'|'right'" defaultInfo="left" />
+                       <ButtonTr dialog="hasIcon" info="button内是否有Icon" 
+                       type="boolean" defaultInfo="undefined" />
+                       <ButtonTr dialog="iconName" info="button内Icon组件名称" 
+                       type="string" defaultInfo="————" />
+                       <ButtonTr dialog="changeloading" info="button点击是否会出现缓冲效果" 
+                       type="boolean" defaultInfo="false" />
+                       <ButtonTr dialog="ghost" info="button是否处于幽灵模式" 
+                       type="boolean" defaultInfo="false" />
                     </tbody>
             </table>
             </div>

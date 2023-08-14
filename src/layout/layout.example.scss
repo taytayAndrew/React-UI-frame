@@ -1,4 +1,4 @@
-.x{
+.headerAndFooter{
     height: 40px;
     background-color: #99a9bf;
     margin: 4px 0;
@@ -6,14 +6,14 @@
     border-radius: 10px;
     padding: 5px;
 }
-.y{
+.layoutContent{
     background-color: #d3dce6;
     margin: 4px 0;
     color: white;
     border-radius: 10px;
     padding: 5px;
 }
-.z{
+.aside{
     background-color: #e5e9f2;
     width: 200px;
     margin: 4px 0;
@@ -21,11 +21,10 @@
     border-radius: 10px;
     padding: 5px;
 }
-.z + .y ,.y + .z, .z + .yu-layout {
+.aside + .layoutContent ,.layoutContent + .aside, .aside + .yu-layout {
     margin-left: 8px;
 }
 .exampleDetail{
-    margin-top: 50px;
     margin-bottom: 30px;
 
 }

@@ -7,9 +7,9 @@ import { Layout } from "./layout"
 export const LayoutExample1:React.FC = () =>{
  return (
             <Layout className='exampleShow'>
-                <Header className="x">header</Header>
-                <Content className="y">content</Content>
-                <Footer className="x">footer</Footer>
+                <Header className="headerAndFooter">header</Header>
+                <Content className="layoutContent">content</Content>
+                <Footer className="headerAndFooter">footer</Footer>
             </Layout>
             )
 }

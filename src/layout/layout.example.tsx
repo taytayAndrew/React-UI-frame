@@ -6,6 +6,7 @@ import { LayoutExample4 } from "./layoutExample4"
 import { LayoutExampleDemo } from "./layoutExampleDemo"
 import { LayoutExample1 } from "./layoutExample1"
 import { LayoutExample2 } from "./layoutExample2"
+import { ButtonTr } from "../button/buttonAPI"
 
 
 export const layoutExample:React.FC = () =>{
@@ -50,5 +51,20 @@ export const layoutExample:React.FC = () =>{
              <LayoutExampleDemo exampleNum={4}/>
             </div>
         </div>
+        <table className="api-table">
+                <thead>
+                    <tr>
+                        <th>参数</th>
+                        <th className="des">说明</th>
+                        <th className="type">类型</th>
+                        <th>默认值</th>
+                    </tr>
+                </thead>
+                    <tbody>
+                       <ButtonTr dialog="className" info="布局默认样式" 
+                       type="'headerAndFooter'|'layoutContent'|aside'|
+                       " defaultInfo="————" />
+                    </tbody>
+            </table>
     </div>)
 }

@@ -7,12 +7,12 @@ import { Aside } from "./aside"
 
 export const LayoutExample4:React.FC = () =>{
  return (
-    <Layout className='' style={{height:'350px',width:'500px'}}>
-    <Aside className="z" >aside</Aside>
+    <Layout style={{height:'350px',width:'500px'}}>
+    <Aside className="aside" >aside</Aside>
         <Layout>
-        <Header className="x">header</Header>
-        <Content className="y">content</Content>
-        <Footer className="x">footer</Footer>
+        <Header className="headerAndFooter">header</Header>
+        <Content className="layoutContent">content</Content>
+        <Footer className="headerAndFooter">footer</Footer>
         </Layout>
     </Layout>
             )
